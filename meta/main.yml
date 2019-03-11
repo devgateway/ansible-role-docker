@@ -5,12 +5,13 @@ galaxy_info:
   license: GPLv3
   min_ansible_version: 2.7
   platforms:
-    - name: RH
+    - name: EL
       versions:
         - all
     - name: Debian
       versions:
-        - all
+        - buster
+        - sid
   galaxy_tags:
     - firewalld
     - docker
