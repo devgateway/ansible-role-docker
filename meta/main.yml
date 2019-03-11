@@ -1,4 +1,5 @@
 galaxy_info:
+  role_name: docker
   author: Development Gateway
   description: Install Docker
   company: Development Gateway
@@ -7,7 +8,8 @@ galaxy_info:
   platforms:
     - name: EL
       versions:
-        - all
+        - 6
+        - 7
     - name: Debian
       versions:
         - buster
