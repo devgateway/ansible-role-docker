@@ -7,23 +7,5 @@
   service:
     name: docker
     enabled: true
-  register: dkr_docker_status
 
-# Don't change Firewalld status: it's up to the machine admin
-- name: Check Firewalld status
-  service:
-    name: firewalld
-    enabled: true
-  check_mode: true
-  register: dkr_firewalld_status
 
-# In order to apply its firewall rules
-- name: Restart Docker
-  service:
-    name: docker
-    state: |-
-      {%- if dkr_firewalld_status.changed and not dkr_docker_status.changed -%}
-      restarted
-      {%- else -%}
-      started
-      {%- endif -%}

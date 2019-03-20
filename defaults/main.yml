@@ -1,10 +1,8 @@
 ---
 dkr_packages:
   RedHat:
-    - firewalld
     - docker
     - python-docker-py
   Debian:
-    - firewalld
     - docker.io
     - python3-docker
