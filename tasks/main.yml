@@ -9,4 +9,9 @@
     enabled: true
     state: started
 
+- name: Load Docker daemon config
+  slurp:
+    src: "{{ dkr_config_path[ansible_os_family] }}"
+  register: dkr_conf_b64
+  ignore_errors: true
 

@@ -6,3 +6,6 @@ dkr_packages:
   Debian:
     - docker.io
     - python3-docker
+dkr_config_path:
+  RedHat: /etc/docker/daemon.json
+  Debian: /etc/docker/daemon.json
