@@ -9,3 +9,10 @@ dkr_packages:
 dkr_config_path:
   RedHat: /etc/docker/daemon.json
   Debian: /etc/docker/daemon.json
+dkr_daemon_config:
+  Debian:
+    log-driver: journald
+  RedHat:
+    log-driver: journald
+    selinux-enabled: true
+    signature-verification: false
