@@ -1,11 +1,4 @@
 ---
-dkr_packages:
-  RedHat:
-    - docker
-    - python-docker-py
-  Debian:
-    - docker.io
-    - python3-docker
 dkr_config_path:
   RedHat: /etc/docker/daemon.json
   Debian: /etc/docker/daemon.json
@@ -16,3 +9,10 @@ dkr_daemon_config:
     log-driver: journald
     selinux-enabled: true
     signature-verification: false
+dkr_packages:
+  RedHat:
+    - docker
+    - python-docker-py
+  Debian:
+    - docker.io
+    - python3-docker
